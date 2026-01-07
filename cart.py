@@ -12,4 +12,10 @@ def view_cart():
     print('Cart Anda Masih Kosong')
     return
   
-  print('')
+  print('\nISI CART')
+  total = 0
+  for item in cart:
+    subtotal = item['price'] = item['qty']
+    
+    
+    
