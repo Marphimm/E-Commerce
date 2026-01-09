@@ -1,6 +1,6 @@
 from auth import register, login, logout, current_user
 from product import show_products, add_product
-from cart import add_to_cart, show_cart
+from cart import added_to_cart, show_cart
 from transaction import checkout
 
 def clear_line():
@@ -49,7 +49,7 @@ def handle_cart():
         elif choice == "2":
             product_id = int(input("ID Produk: "))
             qty = int(input("Jumlah: "))
-            add_to_cart(product_id, qty)
+            added_to_cart(product_id, qty)
 
         elif choice == "0":
             break
