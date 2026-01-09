@@ -8,7 +8,7 @@ def show_products():
   
   print('\nDaftar Produk')
   for product in products:
-    print(f'- {product['name']} | Harga: {product['price']} | Stok: {product['stock']}')
+    print(f"- {product['name']} | Harga: {product['price']} | Stok: {product['stock']}")
 
 def add_product(name, price, stock):
   if not require_login():
