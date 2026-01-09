@@ -1,4 +1,4 @@
-from auth import current_user, is_logged_in
+from auth import current_user, require_login
 from data import products
 
 def show_products():
@@ -11,12 +11,11 @@ def show_products():
     print(f'- {product['name']} | Harga: {product['price']} | Stok: {product['stock']}')
 
 def add_product(name, price, stock):
-  if not is_logged_in():
-    print('Login Terlebih Dahulu')
+  if not require_login():
     return
   
   if current_user['role'] != 'penjual':
-    print('Anda bukan Penjual tidak bisa menambahkan barang')
+    print('Selain Penjual Tidak Bisa Menambahkan Barang')
     return
   
   new_id = len(products) + 1
@@ -25,7 +24,7 @@ def add_product(name, price, stock):
     "id": new_id,
     "name": name,
     "price": price,
-    "stok": stock
+    "stock": stock
   }
   
   products.append(product)

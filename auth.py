@@ -27,3 +27,9 @@ def logout():
 
 def is_logged_in():
   return current_user is not None
+
+def require_login():
+  if not is_logged_in():
+    print('login Terlebih Dahulu')
+    return True
+  return False
