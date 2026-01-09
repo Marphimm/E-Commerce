@@ -41,7 +41,7 @@ def show_cart():
   for item in cart:
     subtotal = item['harga'] * item['stok']
     total += subtotal
-    print(f'- {item['nama']} | {item['stok']} | Subtotal: {subtotal}')
+    print(f"- {item['nama']} | {item['stok']} | Subtotal: {subtotal}")
   
   print(f'Total; {total}')
 

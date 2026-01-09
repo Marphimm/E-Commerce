@@ -18,7 +18,7 @@ def checkout():
     for product in products:
       if product['id'] == item['product_id']:
         if product['stock'] < item['qty']:
-          print(f'Stok {product['stock']} Tidak Cukup')
+          print(f"Stok {product['stock']} Tidak Cukup")
           return
         
         product['stock'] -= product['qty']

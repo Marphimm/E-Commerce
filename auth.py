@@ -4,7 +4,7 @@ from data import users
 current_user = None
 
 def hash_password (password):
-  encoded_password = password.encoded()
+  encoded_password = password.encode()
   hashed_password = hashlib.sha256(encoded_password).hexdigest()
 
   return hashed_password
